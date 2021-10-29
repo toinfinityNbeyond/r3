@@ -1,24 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import Sidebar from "./template/Sidebar";
+import Nav from "./template/Nav";
+import PageTemplate from "./template/PageTemplate";
+import HelloPage from "./pages/HelloPage";
+import MainPage from "./pages/MainPage";
+import PortfolioPage from "./pages/PortfolioPage";
+
+import Pages from './pages'
+import {BrowserRouter} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      //빈태그에서 BrowerRouter로 바꿔서 싸줬어용
+      <BrowserRouter>
+          <Sidebar></Sidebar>
+          {/*<Nav></Nav> //얘 못써요 의미없음*/}
+          {/*<PageTemplate></PageTemplate> 이거까지하면 우리가 보는 기본 페이지 템플릿 완.*/}
+          {/*<HelloPage></HelloPage>*/}
+          {/*<MainPage></MainPage>*/}
+          {/*<PortfolioPage></PortfolioPage>*/}
+          <Pages></Pages>
+      </BrowserRouter>
   );
 }
 
